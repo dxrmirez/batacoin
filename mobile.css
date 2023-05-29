@@ -1,0 +1,29 @@
+/* font-family: 'DM Sans', sans-serif;
+font-family: 'Inter', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --linear-bg: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secundary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --black: #201e1c;
+  --grey: #bababa;
+  --white: #faf8f7;
+  --white-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  --black-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+body {
+  background-color: var(--black);
+}
