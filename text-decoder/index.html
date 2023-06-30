@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Text Decoder - AxioDev</title>
+    <link rel="shortcut icon" href="aut-pics/sc-text-decoder.png" type="image/png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <a href="."><img src="https://i.ibb.co/XLXkwBn/dxr-trsp-b.png" alt="dxr-trsp-b" style="width: 75px;"
+                id="logo"></a>
+        <a href="https://github.com/dxrmirez/text-decoder" target="_blank">
+            <h1><strong>dxrmirez</strong>/text-decoder</h1>
+        </a>
+    </header>
+
+    <main>
+        <section id="prompt">
+            <div class="div-inputs">
+                <textarea name="prompting" id="prompt-text" cols="30" rows="10"
+                    placeholder="Ingresa tu mensaje aquí <...>"></textarea>
+            </div>
+            <div class="div-actions">
+                <div class="div-buttons">
+                    <input type="button" value="Encode" class="fillButton" id="enco-button">
+                    <input type="button" value="Decode" class="fillButton" id="deco-button">
+                </div>
+                <div class="hint">
+                    <p>✇ Solo letras minúsculas y sin acentos</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="generated-text">
+            <div id="no-text">
+                <img src="https://i.ibb.co/7Yk60fm/searching.png" alt="searching">
+                <div>
+                    <h1>Ningún texto fue encriptado</p>
+                    <h2>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div id="yes-text">
+                <div>
+                    <em><span id="type-span"></span><br><br></em>
+                    <textarea name="output" id="text-span" cols="25" rows="10" disabled></textarea>
+                </div>
+                <div style="text-align: center; padding-top: 20px;">
+                    <input type="button" value="Copy" class="fillButton" id="copy-button">
+                    <input type="button" value="SHOW CODE" class="textButton" id="show-button">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="height: 32px;"></footer>
+    <script src="decoder.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Raleway:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+body {
+    background-color: #ffe1d0;
+}
+
+body a {
+    text-decoration: none;
+}
+
+header {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+#logo:hover {
+    filter: saturate(1.25);
+    filter: brightness(0.8);
+    transition: 0.5s;
+}
+
+header>a {
+    color: #b5838d;
+}
+
+header>a:hover {
+    color: #b8596c;
+    transition: 0.5s;
+}
+
+main {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#prompt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.div-inputs {
+    vertical-align: top;
+}
+
+.hint {
+    color: #6d6875;
+    font-size: 12px;
+    padding-top: 8px;
+}
+
+#prompt-text {
+    width: 100%;
+    height: 500px;
+    padding: 60px 40px 20px 60px;
+    box-sizing: border-box;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #6d6875;
+    background-color: #ffe1d0;
+    outline: none;
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+#prompt-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+#prompt-text::-webkit-scrollbar-thumb {
+    background-color: rgba(43, 41, 46, 0.3);
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #b5838d;
+}
+
+.div-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fillButton {
+    margin: 0px 20px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #6d6875;
+    border-radius: 16px 0 16px 0;
+    border: none;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    width: 112px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffb4a2;
+    cursor: pointer;
+}
+
+.fillButton:hover {
+    background-color: #e88870;
+    color: #6d6875;
+    transition: 0.7s;
+}
+
+.fillButton:active {
+    color: #ffb4a2;
+    background-color: #6d6875;
+    transition: 0s;
+}
+
+#generated-text {
+    width: 500px;
+    height: 580px;
+    background: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+    color: #6d6875;
+    display: flex;
+}
+
+#text-span {
+    width: 100%;
+    height: 440px;
+    color: #6d6875;
+    font-size: 20px;
+    text-align: right;
+    outline: none;
+    resize: none;
+    background-color: white;
+}
+
+#text-span::-webkit-scrollbar {
+    width: 8px;
+}
+
+#text-span::-webkit-scrollbar-thumb {
+    background-color: rgba(43, 41, 46, 0.3);
+    border-radius: 5px;
+}
+
+#no-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#no-text>img {
+    width: 250px;
+}
+
+#no-text h1 {
+    padding: 24px 32px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#no-text h2 {
+    padding: 0px 24px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#yes-text {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 32px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.textButton {
+    background-color: white;
+    color: #b5838d;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.textButton:hover {
+    color: #b8596c;
+    transition: 0.4s;
+}
+
+.textButton:active {
+    color: #e1b5be;
+    transition: 0s;
+}
+
+/* Ajustes para tablets */
+@media screen and (max-width:900px) {
+    
+    main {
+        flex-direction: column;
+        height: 85vh;
+        margin: 0 20px;
+    }
+
+    #text-span{
+        height: auto;
+    }
+
+    .div-actions {
+        margin: 30px 0;
+    }
+
+    #generated-text {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    #no-text {
+        flex-direction: row;
+    }
+    #no-text h2{
+        font-size: 20px;
+    }
+    #no-text>img {
+        width: 124px;
+    }
+    #prompt .fillButton{
+        font-size: 24px;
+        width: 160px;
+    }
+   .hint{
+       font-size: 18px; 
+    }
+    header h1{
+        font-size: 20px
+    }
+}
+
+/* Ajustes para smartphones */
+@media screen and (max-width:540px) {
+    main {
+        margin: 0 20px;
+        height: 100%;
+    }
+
+    #no-text>img {
+        display: none;
+    }
+    #no-text h2{
+        font-size: 16px;
+    }
+    #prompt-text{
+        padding: 40px 0;
+        font-size: 24px
+    }
+    .div-buttons, .hint {
+        scale: 1;
+    }
+    #prompt .fillButton{
+        font-size: 16px;
+        width: 112px;
+    }
+   .hint{
+       font-size: 14px; 
+    }
+    header h1{
+        font-size: 16px
+    }
+    
+}
